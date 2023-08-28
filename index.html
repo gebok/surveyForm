@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Staff Survey Form</title>
+     <meta lang="en" name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+     <!-- Ubuntu Google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+     <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+        <h1 id="title">Staff Survey Form</h1>
+        <p id="description">Thank you for taking time to help us improve our service</p>
+
+        <form id="survey-form">
+
+          <fieldset>
+            <label for="name" id="name">Name <input type="text" id="name-label" placeholder=" Fullname" name="name" required></label>
+            <label for="email" id="email">Email <input type="email" id="email-label" placeholder=" Email address" name="email" required></label>
+            <label for="number" id="number">Age <input type="number" id="number-label" pattern=[0-9] min="13" max="100" placeholder=" Age " name="number" required></label>
+          </fieldset>
+          
+          <hr>
+          
+          <fieldset>
+            <label for="dropdown" id="dropdown">Which of the following best describe your current role?
+                  <select id="dropdown" name="">
+                    <option value="1">(select one)</option>
+                    <option value="2">Student</option>
+                    <option value="3">Full Time Employment</option>
+                    <option value="4">Part Time Employment</option>
+                    <option value="5">Part Time Student</option>
+                    <option value="6">Industrial Training Student</option>
+                  </select>
+                </label>
+          </fieldset>
+
+          <fieldset>
+            <label id="radioBtn">Would you recommend this staff survey to a colleague?</label>
+            <label><input type="radio" name="radio-btn" value="most-definitely"> Most Definitely</label>
+            <label><input type="radio" name="radio-btn" value="definitely"> Definitely</label>
+            <label><input type="radio" name="radio-btn" value="maybe"> Maybe</label>
+            <label><input type="radio" name="radio-btn" value="not-sure"> Not sure</label>
+          </fieldset>
+
+          <hr>
+
+          <fieldset>
+            <label>What would you like to see improved?</label>
+            <label for=""><input type="checkbox" value="leave-app-process" required > Leave application process</label>
+            <label for=""><input type="checkbox" value="procurement-process" required > Procurement process</label>
+            <label for=""><input type="checkbox" value="pdr-process" required > Performance development review process</label>
+            <label for=""><input type="checkbox" value="ad-process" required > Asset disposal process</label>
+            <label for="comments" id="comments">I would like to make the following additional comments:
+                <textarea id="comments" rows="3" cols="30" name="comments" placeholder="I like coding on the beach ..."></textarea>
+            </label>
+          </fieldset>
+
+          <input type="submit" value="Submit" required class="submit">
+
+        </form>
+  </body>
+</html>
